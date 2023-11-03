@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script defer type="module" src="./alpine.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script type="module" src="preact-hello-word.component.js"></script>
+    <div x-data="{ count: 0 }">
+        <button x-on:click="count++">Increment</button>
+        <button x-on:click="count--">Decrement</button>
+
+        <span x-text="'Count: ' + count"></span>
+    </div>
+    <div id="vue-app">
+        <h1>{{ count }}</h1>
+        <button @click="increment">Increment</button>
+        <button @click="decrement">Decrement</button>
+    </div>
+    <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.js"></script>
+    <script type="module" src="vue-hello-word.component.js"></script>
+    <div id="mithril-app"></div>
+    <script type="module" src="mithril.js"></script>
+    <script type="module" src="mithril-hello-world.component.js"></script>
+</body>
+
+</html>
