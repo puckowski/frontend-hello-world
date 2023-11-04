@@ -1,24 +1,6 @@
 import {
-    ref,
     createApp
 } from './vue.js';
+import VueCounter from './vue-counter.component.js'
 
-createApp({
-    setup() {
-        const count = ref(0)
-
-        const increment = () => {
-            count.value++
-        }
-
-        const decrement = () => {
-            count.value--
-        }
-
-        return {
-            count,
-            increment,
-            decrement
-        }
-    }
-}).mount('#vue-app')
+createApp(VueCounter).mount('#vue-app')
