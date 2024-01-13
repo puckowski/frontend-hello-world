@@ -31,6 +31,34 @@
 
         mount('sling-hello', new HelloWorldComponent());
     </script>
+    <script src="jquery.js"></script>
+    <div id="counter-component">
+        <p>Count: <span id="count">0</span></p>
+        <button id="incrementBtn">Increment</button>
+        <button id="decrementBtn">Decrement</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            let count = 0;
+
+            function updateCount() {
+                $('#count').text(count);
+            }
+
+            $('#incrementBtn').on('click', function () {
+                count++;
+                updateCount();
+            });
+
+            $('#decrementBtn').on('click', function () {
+                if (count > 0) {
+                    count--;
+                    updateCount();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
