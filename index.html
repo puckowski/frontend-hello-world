@@ -23,6 +23,14 @@
 
     <div id="solid-hello"></div>
     <script src="hello-solid.component.js" type="module"></script>
+
+    <div id="sling-hello"></div>
+    <script type="module">
+        import { mount } from './sling.js';
+        import { HelloWorldComponent } from './sling-hello.component.js';
+
+        mount('sling-hello', new HelloWorldComponent());
+    </script>
 </body>
 
 </html>
